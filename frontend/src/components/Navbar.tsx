@@ -14,30 +14,15 @@ import {
   HelpCircle,
   FileEdit
 } from 'lucide-react'
+import AccessibilityToolbar from '@/components/AccessibilityToolbar'
 
 export default function Navbar() {
   const pathname = usePathname()
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-      {/* Top Gov Header */}
-      <div className="bg-slate-900 text-slate-300 text-xs py-1 px-4 sm:px-8 flex justify-between items-center border-b border-slate-800">
-        <div className="flex items-center space-x-2">
-          <span className="font-semibold text-white">GOVERNMENT OF INDIA</span>
-          <span>•</span>
-          <span>MINISTRY OF TRIBAL AFFAIRS</span>
-          <span className="hidden md:inline">• SIH 2026 (SIH26239)</span>
-        </div>
-        <div className="flex items-center space-x-4">
-          <button className="flex items-center space-x-1 hover:text-white transition">
-            <Globe2 className="w-3.5 h-3.5 text-mota-500" />
-            <span>English / हिन्दी / ଓଡ଼ିଆ</span>
-          </button>
-          <span className="bg-mota-800 text-mota-100 px-2 py-0.5 rounded text-[10px] font-mono">
-            v1.0.0
-          </span>
-        </div>
-      </div>
+      {/* Top Sovereign & Accessibility Header */}
+      <AccessibilityToolbar />
 
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">

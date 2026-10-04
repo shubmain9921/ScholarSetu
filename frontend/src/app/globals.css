@@ -3,18 +3,47 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 15, 23, 42;
-  --background-start-rgb: 248, 250, 252;
-  --background-end-rgb: 255, 255, 255;
+  --color-primary-bg: #F8FAFC;
+  --color-canvas-white: #FFFFFF;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #0F172A;
+  background-color: #F8FAFC;
   min-height: 100vh;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus styling */
+:focus-visible {
+  outline: 2px solid #D97706;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbars for data-dense tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Low-bandwidth mode optimizations */
+.low-bandwidth * {
+  animation: none !important;
+  transition: none !important;
+}
+
+/* Sovereign Digital Setu gradient pathway */
+.setu-pathway {
+  background: linear-gradient(90deg, #1E3E62 0%, #D97706 50%, #15803D 100%);
 }

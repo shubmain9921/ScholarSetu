@@ -16,6 +16,7 @@ import {
   Users
 } from 'lucide-react'
 import { API_BASE } from '@/lib/config'
+import DigitalSetuFlow from '@/components/DigitalSetuFlow'
 
 export default function HomePage() {
   // State for interactive eligibility self-check
@@ -189,6 +190,11 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* The Digital Setu - Core Architecture Flow */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <DigitalSetuFlow />
       </section>
 
       {/* Schemes Section */}

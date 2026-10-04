@@ -16,6 +16,7 @@ import {
   FileText
 } from 'lucide-react'
 import { API_BASE } from '@/lib/config'
+import EvidenceCard from '@/components/EvidenceCard'
 
 export default function ApplicantDashboard() {
   const [appData, setAppData] = useState<any>(null)
@@ -352,6 +353,81 @@ export default function ApplicantDashboard() {
               Direct Benefit Transfer (DBT) to SBI A/c ending in ****8293 verified.
             </p>
           </div>
+        </div>
+      </div>
+
+      {/* Signature Evidence Provenance Checklist (PRD Section 16 & Design Hero 1) */}
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 space-y-5 shadow-sm">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-4">
+          <div>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+              Evidence Provenance & Automated Rule Verification
+            </span>
+            <h3 className="text-base font-bold text-slate-900 mt-0.5">
+              Transparent Policy Checklist (NFST-2026.1)
+            </h3>
+          </div>
+          <span className="bg-forest-50 text-forest-700 text-xs font-bold px-3 py-1 rounded-full border border-forest-200">
+            ✓ 4 of 4 Core Criteria Met
+          </span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <EvidenceCard
+            ruleId="NFST-R-001"
+            ruleTitle="Scheduled Tribe Category Validation"
+            result="PASS"
+            extractedValue="Scheduled Tribe (Santhal)"
+            sourceDocument="ST_Certificate_Baripada_SDO.svg (Page 1)"
+            authorityStamp="Sub-Divisional Officer, Baripada"
+            confidence={0.992}
+            sha256Hash="9b4f73a218d6c8204...918a"
+            policyCitation="NFST Scheme Guidelines 2026-27, Section 3.1"
+            evaluatedAt="02 Oct 2026, 10:14:02 UTC"
+            explanation="Candidate confirmed as Scheduled Tribe from recognized Sub-Divisional revenue authority."
+          />
+
+          <EvidenceCard
+            ruleId="NFST-R-004"
+            ruleTitle="Annual Family Income Ceiling (≤ ₹6,00,000)"
+            result={activeDeficiency ? 'DEFICIENT' : 'PASS'}
+            extractedValue={activeDeficiency ? '₹2,40,000 (Notary Affidavit)' : '₹2,40,000 / annum'}
+            sourceDocument={activeDeficiency ? 'Income_Affidavit_Notary_Flawed.svg' : 'Income_Certificate_Tehsildar.svg'}
+            authorityStamp={activeDeficiency ? 'Notary Public, Baripada (Unauthorized)' : 'Tahasildar, Mayurbhanj'}
+            confidence={activeDeficiency ? 0.642 : 0.978}
+            sha256Hash="e4b8a21f83c029d11...3a9c"
+            policyCitation="NFST Guidelines 2026-27, Section 4.1 & Rule NFST-R-004"
+            evaluatedAt="02 Oct 2026, 10:14:03 UTC"
+            explanation={activeDeficiency ? 'Flagged: Notary affidavits are not admissible under MoTA policy. Revenue authority certificate required.' : 'Income assessed at ₹2,40,000, well below the statutory ceiling of ₹6,00,000.'}
+          />
+
+          <EvidenceCard
+            ruleId="NFST-R-003"
+            ruleTitle="Upper Age Limit for ST Candidates (≤ 36 yrs)"
+            result="PASS"
+            extractedValue="28 Years (DOB: 14-May-1998)"
+            sourceDocument="Aadhaar e-KYC Demographic Token #UID-8293"
+            authorityStamp="Unique Identification Authority of India"
+            confidence={1.0}
+            sha256Hash="aadhaar-hash-tok-829341"
+            policyCitation="Rule Catalogue NFST-2026.1 / NFST-R-003"
+            evaluatedAt="02 Oct 2026, 10:14:01 UTC"
+            explanation="Candidate age (28 yrs) is within affirmative action relaxed ceiling of 36 years."
+          />
+
+          <EvidenceCard
+            ruleId="NFST-R-005"
+            ruleTitle="Regular Full-Time Ph.D. Enrollment"
+            result="PASS"
+            extractedValue="Ph.D. Enrolled (Botany & Ethnomedicine)"
+            sourceDocument="Admission_Letter_Ph.D._NOU.svg (Guide Endorsed)"
+            authorityStamp="Registrar, North Orissa University"
+            confidence={0.985}
+            sha256Hash="nou-phd-adm-91823"
+            policyCitation="NFST Guidelines 2026-27, Section 5.2"
+            evaluatedAt="02 Oct 2026, 10:14:04 UTC"
+            explanation="Regular full-time research registration endorsed by university research guide."
+          />
         </div>
       </div>
     </div>
