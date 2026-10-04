@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <defs>
+    <style>
+      .title { font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold; fill: #1e293b; text-anchor: middle; }
+      .sub { font-family: 'Times New Roman', serif; font-size: 13px; fill: #475569; text-anchor: middle; }
+      .body { font-family: 'Times New Roman', serif; font-size: 15px; fill: #0f172a; line-height: 1.8; }
+      .field { font-family: 'Courier New', monospace; font-weight: bold; fill: #14532d; }
+      .seal { font-family: 'Arial', sans-serif; font-size: 10px; font-weight: bold; fill: #047857; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Border & Paper -->
+  <rect x="15" y="15" width="770" height="1070" fill="#fffdfa" stroke="#047857" stroke-width="4" rx="8" />
+  <rect x="25" y="25" width="750" height="1050" fill="none" stroke="#d1fae5" stroke-width="2" />
+
+  <!-- Government Header -->
+  <circle cx="400" cy="85" r="35" fill="#047857" opacity="0.08" />
+  <text x="400" y="80" class="sub" font-size="11">GOVERNMENT OF ODISHA</text>
+  <text x="400" y="102" class="title">REVENUE &amp; DISASTER MANAGEMENT DEPARTMENT</text>
+  <text x="400" y="125" class="sub">OFFICE OF THE SUB-DIVISIONAL MAGISTRATE, BARIPADA</text>
+  <line x1="150" y1="140" x2="650" y2="140" stroke="#047857" stroke-width="1.5" />
+
+  <!-- Certificate Heading -->
+  <rect x="220" y="160" width="360" height="35" fill="#ecfdf5" stroke="#059669" stroke-width="1" rx="4" />
+  <text x="400" y="184" class="title" font-size="16" fill="#065f46">COMMUNITY (SCHEDULED TRIBE) CERTIFICATE</text>
+
+  <!-- Certificate Metadata -->
+  <text x="60" y="235" font-family="Arial" font-size="12" fill="#64748b">Certificate No: <tspan class="field">ST/OD/2024/C4CDFB</tspan></text>
+  <text x="620" y="235" font-family="Arial" font-size="12" fill="#64748b">Date: <tspan font-weight="bold" fill="#0f172a">15-Jun-2024</tspan></text>
+
+  <!-- Main Legal Text -->
+  <text x="60" y="300" class="body">This is to certify that Shri / Smt. <tspan class="field" font-size="16">Rahul Kumar</tspan>,</text>
+  <text x="60" y="340" class="body">Son/Daughter of Shri <tspan class="field">Gopal Chandra Kumar</tspan>, residing at Village: <tspan class="field">Baripada</tspan>,</text>
+  <text x="60" y="380" class="body">District: <tspan class="field">Mayurbhanj</tspan> in the State of <tspan class="field">Odisha</tspan> belongs to the</text>
+
+  <!-- Caste Highlight Box -->
+  <rect x="60" y="415" width="680" height="48" fill="#f0fdf4" stroke="#86efac" stroke-width="1" rx="6" />
+  <text x="400" y="446" class="title" font-size="18" fill="#15803d">SANTHAL (SCHEDULED TRIBE)</text>
+
+  <text x="60" y="500" class="body">community which is recognized as a Scheduled Tribe under the Constitution</text>
+  <text x="60" y="535" class="body">(Scheduled Tribes) Order, 1950 as amended from time to time.</text>
+
+  <text x="60" y="600" class="body">2. Shri <tspan class="field">Rahul Kumar</tspan> and his family ordinarily reside in the</text>
+  <text x="60" y="635" class="body"><tspan class="field">Mayurbhanj</tspan> District of the State of <tspan class="field">Odisha</tspan>.</text>
+
+  <!-- QR Code Mock Vector -->
+  <rect x="60" y="760" width="100" height="100" fill="#0f172a" />
+  <rect x="70" y="770" width="30" height="30" fill="#ffffff" />
+  <rect x="78" y="778" width="14" height="14" fill="#0f172a" />
+  <rect x="120" y="770" width="30" height="30" fill="#ffffff" />
+  <rect x="128" y="778" width="14" height="14" fill="#0f172a" />
+  <rect x="70" y="820" width="30" height="30" fill="#ffffff" />
+  <rect x="78" y="828" width="14" height="14" fill="#0f172a" />
+  <rect x="115" y="815" width="35" height="35" fill="#ffffff" />
+  <rect x="120" y="820" width="25" height="25" fill="#0f172a" />
+  <text x="110" y="880" class="seal">e-Pramaan QR</text>
+
+  <!-- Digital Seal & Authority -->
+  <circle cx="650" cy="810" r="48" fill="none" stroke="#047857" stroke-width="2" stroke-dasharray="4 2" />
+  <circle cx="650" cy="810" r="42" fill="#f0fdf4" stroke="#047857" stroke-width="1" />
+  <text x="650" y="805" class="seal">DIGITALLY SIGNED</text>
+  <text x="650" y="820" class="seal">GOVT OF ODISHA</text>
+  <text x="650" y="880" class="sub" font-weight="bold">Sub-Divisional Magistrate</text>
+  <text x="650" y="898" class="sub">Baripada, Mayurbhanj</text>
+
+  <!-- Footer Notice -->
+  <line x1="50" y1="1020" x2="750" y2="1020" stroke="#e2e8f0" stroke-width="1" />
+  <text x="400" y="1045" class="sub" font-size="10">This digital certificate is legally valid under the Information Technology Act 2000. Verified on National DigiLocker Repository.</text>
+</svg>

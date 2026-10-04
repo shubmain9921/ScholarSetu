@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <defs>
+    <style>
+      .title { font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; fill: #7f1d1d; text-anchor: middle; }
+      .sub { font-family: 'Arial', sans-serif; font-size: 12px; fill: #475569; text-anchor: middle; }
+      .body { font-family: 'Courier New', monospace; font-size: 14px; fill: #0f172a; line-height: 1.8; }
+      .field { font-weight: bold; fill: #b91c1c; }
+      .stamp { font-family: 'Arial', sans-serif; font-size: 11px; font-weight: bold; fill: #dc2626; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect x="15" y="15" width="770" height="1070" fill="#fffdf5" stroke="#b91c1c" stroke-width="3" rx="4" />
+
+  <text x="400" y="70" class="title">BEFORE THE NOTARY PUBLIC : BARIPADA</text>
+  <text x="400" y="92" class="sub">AFFIDAVIT FOR INCOME DECLARATION (NOT REVENUE DEPT)</text>
+  <line x1="120" y1="105" x2="680" y2="105" stroke="#b91c1c" stroke-width="1" />
+
+  <text x="60" y="180" class="body">I, <tspan class="field">Rahul K.</tspan> (Name abbreviated on notary document),</text>
+  <text x="60" y="215" class="body">residing at Baripada, do hereby solemnly affirm and state as follows:</text>
+  <text x="60" y="260" class="body">1. That my family income is INR 2,40,000 per annum.</text>
+
+  <!-- Unauthorized Stamp Box -->
+  <rect x="200" y="340" width="400" height="80" fill="#fef2f2" stroke="#ef4444" stroke-width="2" stroke-dasharray="6 3" rx="4" />
+  <text x="400" y="375" class="stamp" font-size="14">UNAUTHORIZED NOTARY STAMP</text>
+  <text x="400" y="398" class="stamp" font-size="11">RULE NFST-R-004: REVENUE OFFICER CERTIFICATE MANDATORY</text>
+
+  <circle cx="620" cy="650" r="50" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="3 3" />
+  <text x="620" y="645" class="stamp">NOTARY PUBLIC</text>
+  <text x="620" y="660" class="stamp">ADVOCATE</text>
+
+  <line x1="50" y1="1020" x2="750" y2="1020" stroke="#fca5a5" stroke-width="1" />
+  <text x="400" y="1045" class="sub" font-size="10" fill="#dc2626">AI FLAGGED: Issuing authority (Notary) does not match State Revenue Master List (Tehsildar / SDO).</text>
+</svg>

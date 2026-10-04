@@ -1,0 +1,64 @@
+{
+  "scheme_code": "NFST",
+  "version": "2026.1",
+  "name": "National Fellowship for Higher Education of ST Students",
+  "effective_from": "2026-04-01",
+  "rules": [
+    {
+      "rule_id": "NFST-R-001",
+      "name": "Mandatory ST Caste Category",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "document_extractions.ST_CERTIFICATE.category",
+      "operator": "EQUALS",
+      "expected_value": "SCHEDULED_TRIBE",
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "ST_STATUS_UNCONFIRMED",
+      "public_explanation": "Applicant category does not confirm Scheduled Tribe status on uploaded certificate."
+    },
+    {
+      "rule_id": "NFST-R-002",
+      "name": "Applicant Name Cross-Verification",
+      "rule_type": "DOCUMENT",
+      "field_source": "document_extractions.ST_CERTIFICATE.candidate_name",
+      "operator": "FUZZY_MATCH_GTE",
+      "expected_value": "applications.dynamic_form_data.full_name",
+      "threshold": 0.85,
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "NAME_FUZZY_CONFIDENCE_LOW",
+      "public_explanation": "The name on the certificate differs from the name submitted in the application."
+    },
+    {
+      "rule_id": "NFST-R-003",
+      "name": "Maximum Age Threshold (36 Years for ST)",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applicant_profiles.age",
+      "operator": "LESS_THAN_OR_EQUAL",
+      "expected_value": 36,
+      "on_fail_action": "INELIGIBLE_FLAG",
+      "reason_code": "AGE_EXCEEDS_SCHEME_LIMIT",
+      "public_explanation": "Age exceeds the 36-year upper limit applicable for NFST candidates."
+    },
+    {
+      "rule_id": "NFST-R-004",
+      "name": "Annual Family Income Ceiling",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applicant_profiles.annual_family_income",
+      "operator": "LESS_THAN_OR_EQUAL",
+      "expected_value": 600000.0,
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "INCOME_EXCEEDS_CEILING",
+      "public_explanation": "Annual family income exceeds the ceiling of ₹6,00,000 per annum."
+    },
+    {
+      "rule_id": "NFST-R-005",
+      "name": "Regular Full-Time Doctoral Enrollment",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applications.dynamic_form_data.course_type",
+      "operator": "IN",
+      "expected_value": ["PHD_REGULAR", "MPHIL_REGULAR", "INTEGRATED_PHD"],
+      "on_fail_action": "INELIGIBLE_FLAG",
+      "reason_code": "COURSE_NOT_APPROVED",
+      "public_explanation": "Only candidates admitted into regular, full-time M.Phil or Ph.D programs are eligible."
+    }
+  ]
+}

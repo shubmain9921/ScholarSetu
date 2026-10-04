@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <defs>
+    <style>
+      .title { font-family: 'Times New Roman', serif; font-size: 19px; font-weight: bold; fill: #1e293b; text-anchor: middle; }
+      .sub { font-family: 'Times New Roman', serif; font-size: 13px; fill: #475569; text-anchor: middle; }
+      .body { font-family: 'Times New Roman', serif; font-size: 15px; fill: #0f172a; line-height: 1.8; }
+      .field { font-family: 'Courier New', monospace; font-weight: bold; fill: #4338ca; }
+    </style>
+  </defs>
+
+  <rect x="15" y="15" width="770" height="1070" fill="#ffffff" stroke="#4338ca" stroke-width="4" rx="8" />
+
+  <text x="400" y="80" class="title">NORTH ORISSA UNIVERSITY (MSCB UNIV)</text>
+  <text x="400" y="102" class="sub">Department of Tribal Studies & Ethnobotany</text>
+  <text x="400" y="125" class="sub">AISHE CODE: U-0355 • BARIPADA, MAYURBHANJ, ODISHA</text>
+  <line x1="100" y1="140" x2="700" y2="140" stroke="#4338ca" stroke-width="1.5" />
+
+  <text x="400" y="190" class="title" font-size="16" fill="#312e81">FULL-TIME REGULAR PH.D. REGISTRATION LETTER</text>
+
+  <text x="60" y="245" class="body">To,</text>
+  <text x="60" y="270" class="field" font-size="16">Rahul Kumar</text>
+  <text x="60" y="295" class="body">Subject: Registration for Ph.D. Degree in Department of Tribal Studies & Ethnobotany</text>
+
+  <text x="60" y="360" class="body">Dear Candidate,</text>
+  <text x="60" y="400" class="body">You are hereby informed that you have been admitted as a full-time, regular</text>
+  <text x="60" y="435" class="body">research scholar in this University under the guidance of <tspan class="field">Dr. P. K. Nayak</tspan>.</text>
+
+  <rect x="60" y="475" width="680" height="50" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1" rx="6" />
+  <text x="400" y="506" class="title" font-size="15" fill="#3730a3">Research Title: Ethnomedicinal Flora of Similipal Biosphere Reserve</text>
+
+  <text x="60" y="580" class="body">Enrollment Date: <tspan class="field">01-Aug-2025</tspan> • Mode: <tspan class="field">REGULAR FULL TIME</tspan></text>
+
+  <text x="600" y="850" class="body" font-weight="bold">Dean of Research</text>
+  <text x="600" y="870" class="sub">North Orissa University</text>
+</svg>

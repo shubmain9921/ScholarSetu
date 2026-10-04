@@ -1,0 +1,63 @@
+{
+  "scheme_code": "NOS",
+  "version": "2026.1",
+  "name": "National Overseas Scholarship for ST Candidates",
+  "effective_from": "2026-04-01",
+  "rules": [
+    {
+      "rule_id": "NOS-R-001",
+      "name": "Mandatory ST Caste Category",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "document_extractions.ST_CERTIFICATE.category",
+      "operator": "EQUALS",
+      "expected_value": "SCHEDULED_TRIBE",
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "ST_STATUS_UNCONFIRMED",
+      "public_explanation": "Candidate ST status not confirmed on certificate."
+    },
+    {
+      "rule_id": "NOS-R-002",
+      "name": "Family Income Ceiling (₹8.0 Lakhs)",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applicant_profiles.annual_family_income",
+      "operator": "LESS_THAN_OR_EQUAL",
+      "expected_value": 800000.0,
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "NOS_INCOME_CEILING_EXCEEDED",
+      "public_explanation": "Annual family income exceeds the limit of ₹8,00,000 for National Overseas Scholarship."
+    },
+    {
+      "rule_id": "NOS-R-003",
+      "name": "Minimum Qualifying Degree Marks (55%)",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applications.dynamic_form_data.undergraduate_percentage",
+      "operator": "GREATER_THAN_OR_EQUAL",
+      "expected_value": 55.0,
+      "on_fail_action": "INELIGIBLE_FLAG",
+      "reason_code": "MIN_ACADEMIC_PERCENTAGE_NOT_MET",
+      "public_explanation": "Candidate must secure at least 55% marks or equivalent grade in the qualifying degree."
+    },
+    {
+      "rule_id": "NOS-R-004",
+      "name": "QS World University Ranking (Top 500)",
+      "rule_type": "ELIGIBILITY",
+      "field_source": "applications.dynamic_form_data.foreign_university_qs_rank",
+      "operator": "LESS_THAN_OR_EQUAL",
+      "expected_value": 500,
+      "on_fail_action": "ROUTE_TO_HUMAN_REVIEW",
+      "reason_code": "QS_RANK_EXCEEDS_500",
+      "public_explanation": "Admission must be in an overseas institution ranked within the top 500 in QS World Rankings."
+    },
+    {
+      "rule_id": "NOS-R-005",
+      "name": "Valid Unconditional Offer Letter",
+      "rule_type": "DOCUMENT",
+      "field_source": "document_extractions.ADMISSION_OFFER.offer_type",
+      "operator": "EQUALS",
+      "expected_value": "UNCONDITIONAL",
+      "on_fail_action": "AUTO_DEFICIENCY",
+      "reason_code": "CONDITIONAL_OFFER_NOT_ACCEPTED",
+      "public_explanation": "An unconditional admission offer letter from the foreign university is mandatory."
+    }
+  ]
+}

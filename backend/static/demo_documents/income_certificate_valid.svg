@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100">
+  <defs>
+    <style>
+      .title { font-family: 'Times New Roman', serif; font-size: 20px; font-weight: bold; fill: #1e293b; text-anchor: middle; }
+      .sub { font-family: 'Times New Roman', serif; font-size: 13px; fill: #475569; text-anchor: middle; }
+      .body { font-family: 'Times New Roman', serif; font-size: 15px; fill: #0f172a; line-height: 1.8; }
+      .field { font-family: 'Courier New', monospace; font-weight: bold; fill: #1e3a8a; }
+      .seal { font-family: 'Arial', sans-serif; font-size: 10px; font-weight: bold; fill: #1d4ed8; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect x="15" y="15" width="770" height="1070" fill="#fffdfa" stroke="#1d4ed8" stroke-width="4" rx="8" />
+  <rect x="25" y="25" width="750" height="1050" fill="none" stroke="#dbeafe" stroke-width="2" />
+
+  <text x="400" y="80" class="sub" font-size="11">GOVERNMENT OF ODISHA</text>
+  <text x="400" y="102" class="title">OFFICE OF THE TAHASILDAR, MAYURBHANJ</text>
+  <text x="400" y="125" class="sub">MISCELLANEOUS REVENUE CASE NO. 606B7E63</text>
+  <line x1="150" y1="140" x2="650" y2="140" stroke="#1d4ed8" stroke-width="1.5" />
+
+  <rect x="260" y="160" width="280" height="35" fill="#eff6ff" stroke="#2563eb" stroke-width="1" rx="4" />
+  <text x="400" y="184" class="title" font-size="16" fill="#1e40af">INCOME CERTIFICATE</text>
+
+  <text x="60" y="235" font-family="Arial" font-size="12" fill="#64748b">Certificate Ref: <tspan class="field">INC/OD/REV/E9D0C0</tspan></text>
+  <text x="620" y="235" font-family="Arial" font-size="12" fill="#64748b">Date: <tspan font-weight="bold" fill="#0f172a">10-Jan-2026</tspan></text>
+
+  <text x="60" y="300" class="body">This is to certify that upon due revenue enquiry, the total annual family income</text>
+  <text x="60" y="340" class="body">from all sources of Shri <tspan class="field" font-size="16">Rahul Kumar</tspan>, resident of Baripada, Mayurbhanj,</text>
+  <text x="60" y="380" class="body">for the Financial Year 2025–2026 is assessed as:</text>
+
+  <!-- Income Box -->
+  <rect x="60" y="415" width="680" height="52" fill="#f0f9ff" stroke="#7dd3fc" stroke-width="1" rx="6" />
+  <text x="400" y="448" class="title" font-size="20" fill="#0369a1">INR 240,000/- (Two Lakh Forty Thousand Only)</text>
+
+  <text x="60" y="515" class="body">This certificate is issued exclusively for the purpose of availing Post-Graduate</text>
+  <text x="60" y="550" class="body">and Doctoral Fellowships under the Ministry of Tribal Affairs (MoTA).</text>
+
+  <circle cx="650" cy="810" r="46" fill="#eff6ff" stroke="#1d4ed8" stroke-width="1.5" />
+  <text x="650" y="805" class="seal">DIGITALLY VERIFIED</text>
+  <text x="650" y="820" class="seal">TEHSILDAR (REV)</text>
+  <text x="650" y="880" class="sub" font-weight="bold">Tahasildar, Mayurbhanj</text>
+
+  <line x1="50" y1="1020" x2="750" y2="1020" stroke="#e2e8f0" stroke-width="1" />
+  <text x="400" y="1045" class="sub" font-size="10">Digitally authenticated via Odisha Revenue e-District Services.</text>
+</svg>
