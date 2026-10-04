@@ -20,6 +20,7 @@ import {
   Clock,
   Check
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function ApplySchemeWizard() {
   const params = useParams()
@@ -111,7 +112,7 @@ export default function ApplySchemeWizard() {
   const handleSubmit = async () => {
     setIsSubmitting(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/applications', {
+      const res = await fetch(`${API_BASE}/api/v1/applications`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -15,6 +15,7 @@ import {
   Building2,
   FileText
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function ApplicantDashboard() {
   const [appData, setAppData] = useState<any>(null)
@@ -25,10 +26,10 @@ export default function ApplicantDashboard() {
   const fetchApplication = async () => {
     setLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/applications')
+      const res = await fetch(`${API_BASE}/api/v1/applications`)
       const data = await res.json()
       if (data && data.length > 0) {
-        const appRes = await fetch(`http://127.0.0.1:8000/api/v1/applications/${data[0].id}`)
+        const appRes = await fetch(`${API_BASE}/api/v1/applications/${data[0].id}`)
         const details = await appRes.json()
         setAppData(details)
       } else {

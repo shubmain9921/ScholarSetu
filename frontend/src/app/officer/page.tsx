@@ -14,6 +14,7 @@ import {
   Search,
   Sparkles
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function OfficerQueuePage() {
   const [queueData, setQueueData] = useState<any>(null)
@@ -23,7 +24,7 @@ export default function OfficerQueuePage() {
   const fetchQueue = async () => {
     setLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/officer/queue')
+      const res = await fetch(`${API_BASE}/api/v1/officer/queue`)
       const data = await res.json()
       setQueueData(data)
     } catch (err) {

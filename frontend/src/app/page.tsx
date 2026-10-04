@@ -15,6 +15,7 @@ import {
   Building2,
   Users
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function HomePage() {
   // State for interactive eligibility self-check
@@ -34,7 +35,7 @@ export default function HomePage() {
   const handleSelfCheck = async () => {
     setIsChecking(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/schemes/${selectedScheme}/self-check`, {
+      const res = await fetch(`${API_BASE}/api/v1/schemes/${selectedScheme}/self-check`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -81,7 +82,7 @@ export default function HomePage() {
   const handleSimulateRule = async () => {
     setIsSimulating(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/admin/rules/simulate', {
+      const res = await fetch(`${API_BASE}/api/v1/admin/rules/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

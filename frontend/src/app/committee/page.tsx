@@ -20,6 +20,7 @@ import {
   Send,
   Sparkles
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 interface Candidate {
   application_id: string
@@ -60,7 +61,7 @@ export default function CommitteeReviewPage() {
   const fetchCandidates = async (isBlind: boolean) => {
     setIsLoading(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/committee/candidates?blind_mode=${isBlind}`)
+      const res = await fetch(`${API_BASE}/api/v1/committee/candidates?blind_mode=${isBlind}`)
       if (res.ok) {
         const data = await res.json()
         setCandidates(data)
@@ -153,7 +154,7 @@ export default function CommitteeReviewPage() {
   const handleDeclareCOI = async (hasConflict: boolean) => {
     if (!selectedCandidate) return
     try {
-      await fetch(`http://127.0.0.1:8000/api/v1/committee/coi-declaration/${selectedCandidate.application_id}`, {
+      await fetch(`${API_BASE}/api/v1/committee/coi-declaration/${selectedCandidate.application_id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -181,7 +182,7 @@ export default function CommitteeReviewPage() {
 
     const total = academicScore + researchScore + tribalScore
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/committee/score/${selectedCandidate.application_id}`, {
+      const res = await fetch(`${API_BASE}/api/v1/committee/score/${selectedCandidate.application_id}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

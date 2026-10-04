@@ -17,6 +17,7 @@ import {
   ZoomIn,
   RotateCcw
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function CaseReviewPage() {
   const params = useParams()
@@ -32,7 +33,7 @@ export default function CaseReviewPage() {
 
   const fetchCase = async () => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/officer/case/${appId}`)
+      const res = await fetch(`${API_BASE}/api/v1/officer/case/${appId}`)
       if (res.ok) {
         const data = await res.json()
         setCaseData(data)
@@ -110,7 +111,7 @@ export default function CaseReviewPage() {
 
   const fetchReplay = async () => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/officer/case-replay/${appId}`)
+      const res = await fetch(`${API_BASE}/api/v1/officer/case-replay/${appId}`)
       const data = await res.json()
       setReplayData(data)
     } catch (err) {
@@ -140,7 +141,7 @@ export default function CaseReviewPage() {
   const handleAction = async (action: string) => {
     setIsActing(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/v1/officer/action/${appId}?action=${action}`, {
+      const res = await fetch(`${API_BASE}/api/v1/officer/action/${appId}?action=${action}`, {
         method: 'POST'
       })
       const data = await res.json()

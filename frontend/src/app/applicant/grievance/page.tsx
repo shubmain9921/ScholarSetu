@@ -15,6 +15,7 @@ import {
   HelpCircle,
   ExternalLink
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 interface GrievanceItem {
   id: string
@@ -54,7 +55,7 @@ export default function GrievancePage() {
   const fetchGrievances = async () => {
     setIsLoading(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/grievances')
+      const res = await fetch(`${API_BASE}/api/v1/grievances`)
       if (res.ok) {
         const data = await res.json()
         setGrievances(data)
@@ -113,7 +114,7 @@ export default function GrievancePage() {
     e.preventDefault()
     setIsSubmitting(true)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/grievances', {
+      const res = await fetch(`${API_BASE}/api/v1/grievances`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

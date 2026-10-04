@@ -18,6 +18,7 @@ import {
   AlertTriangle,
   History
 } from 'lucide-react'
+import { API_BASE } from '@/lib/config'
 
 export default function AdminRulesPage() {
   const [selectedScheme, setSelectedScheme] = useState<'NFST' | 'NOS'>('NFST')
@@ -35,7 +36,7 @@ export default function AdminRulesPage() {
     setIsSimulating(true)
     setPublishSuccess(false)
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/v1/admin/rules/simulate', {
+      const res = await fetch(`${API_BASE}/api/v1/admin/rules/simulate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
